@@ -11,9 +11,15 @@ test('emits events', function(t) {
 
   emitter.emit('ev1', 'A', 'B');
 
+  var evs = 0
   function onData(d) {
+    evs += 1;
+
+    if((d === '["newListener","error",null]\n') && evs === 1){
+      return;
+    }
+
     t.strictEqual(d, '["ev1","A","B"]\n');
     t.end();
   }
-
 });

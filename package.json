@@ -1,40 +1,51 @@
 {
-  "name": "duplex-emitter",
-  "version": "2.1.2",
-  "description": "Duplex Event Emitter",
-  "main": "index.js",
-  "scripts": {
-    "test": "tap tests/*.test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/pgte/duplex-emitter.git"
-  },
+  "name": "duplex-emitter2",
+  "version": "1.0.0",
+  "description": "Duplex Event Emitter based on EventEmitter2",
   "keywords": [
     "event",
     "emitter",
     "stream",
     "duplex",
-    "remote"
+    "remote",
+    "wildcards",
+    "namespaces"
   ],
-  "author": "pgte",
-  "contributors": [
-    {"name": "Pedro Teixeira"},
-    {"name": "Igor Soarez"}
-  ],
-  "license": "MIT",
+  "homepage": "https://github.com/ramitos/duplex-emitter2",
   "bugs": {
-    "url": "https://github.com/pgte/duplex-emitter/issues"
+    "url": "http://github.com/ramitos/duplex-emitter2/issues",
+    "email": "mail@sergioramos.me"
+  },
+  "license": {
+    "url": "https://raw.github.com/ramitos/duplex-emitter2/master/license",
+    "type": "MIT"
+  },
+  "contributors": [
+    "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me)",
+    "Pedro Teixeira <i@pgte.me> (http://www.metaduck.com)",
+    "Igor Soarez (http://soarez.com)"
+  ],
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ramitos/duplex-emitter2.git"
+  },
+  "scripts": {
+    "test": "tap tests/*.test.js"
   },
   "dependencies": {
+    "eventemitter2": "^0.4.14",
+    "split2": "^0.1.2",
     "stream-combiner": "0.0.2",
-    "split": "~0.2.6",
-    "through": "~2.3.4"
+    "through2": "^0.5.1"
   },
   "devDependencies": {
     "tap": "*"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.8"
   }
 }
